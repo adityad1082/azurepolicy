@@ -39,7 +39,7 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
     policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/c285a320-8830-4665-9cc7-bbd05fc7c5c0"
     parameter_values     = <<VALUE
     {
-      "effect": {"value": ""}
+      "effect": {"value": "AuditIfNotExists"}
     }
     VALUE
   }
