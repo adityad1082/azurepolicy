@@ -23,14 +23,14 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
     VALUE
   }
 
-  policy_definition_reference {
-    policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/b4fe1a3b-0715-4c6c-a5ea-ffc33cf823cb"
-    parameter_values     = <<VALUE
-    {
-      "effect": {"value": "DeployIfNotExists"}
-    }
-    VALUE
-  }
+#   policy_definition_reference {
+#     policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/b4fe1a3b-0715-4c6c-a5ea-ffc33cf823cb"
+#     parameter_values     = <<VALUE
+#     {
+#       "effect": {"value": "DeployIfNotExists"}
+#     }
+#     VALUE
+#   }
 
   policy_definition_reference {
     policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/c285a320-8830-4665-9cc7-bbd05fc7c5c0"
