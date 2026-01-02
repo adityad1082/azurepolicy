@@ -29,7 +29,7 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
     parameter_values = <<VALUE
     {
       "effect": {"value": "DeployIfNotExists"},
-      "metricsEnabled": {"value": "/subscriptions/9d07d60f-870c-4033-817b-ba7dfd5a3d71/resourceGroups/terraform-policy-rg/providers/Microsoft.OperationalInsights/workspaces/dev-workspace"}
+      "logAnalytics": {"value": "/subscriptions/9d07d60f-870c-4033-817b-ba7dfd5a3d71/resourceGroups/terraform-policy-rg/providers/Microsoft.OperationalInsights/workspaces/dev-workspace"}
     }
     VALUE
   }
