@@ -7,6 +7,7 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
 
   policy_definition_reference {
     policy_definition_id = azurerm_policy_definition.logic_app_https.id
+    reference_id = "logicapp-https"
     parameter_values     = <<VALUE
     {
       "effect": {"value": "Modify"}
@@ -16,6 +17,7 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
 
   policy_definition_reference {
     policy_definition_id = azurerm_policy_definition.storage_acc_rm_resources.id
+    reference_id = "storage-rm-protection"
     parameter_values     = <<VALUE
     {
       "effect": {"value": "Audit"}
@@ -25,7 +27,7 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
 
   policy_definition_reference {
     policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/b4fe1a3b-0715-4c6c-a5ea-ffc33cf823cb"
-
+    reference_id = "logicapp-diagnostics"
     parameter_values = <<VALUE
     {
       "effect": {"value": "DeployIfNotExists"},
@@ -37,6 +39,7 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
 
   policy_definition_reference {
     policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/c285a320-8830-4665-9cc7-bbd05fc7c5c0"
+    reference_id = "logicapp-logs-audit"
     parameter_values     = <<VALUE
     {
       "effect": {"value": "AuditIfNotExists"}
