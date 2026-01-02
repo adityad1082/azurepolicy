@@ -1,8 +1,8 @@
 resource "azurerm_policy_definition" "storage_acc_rm_resources" {
-  name         = "Storage Account should be migrated to new Azure Resource Manager resources"
+  name         = "Storage Account should be migrated to new ARM"
   policy_type  = "Custom"
   mode         = "Indexed"
-  display_name = "Storage Account should be migrated to new Azure Resource Manager resources"
+  display_name = "Storage Account should be migrated to new ARM"
   description  = "Use new Azure Resource Manager for your storage account to provide security enhancements such as: stronger access control (RBAC), better auditing, Azure Resource Manager based deployment and governance, access to managed identities, access to key vault for secrets, Azure AD-based authentication and support for tags and resource groups for easier security management"
 
   metadata = <<METADATA
