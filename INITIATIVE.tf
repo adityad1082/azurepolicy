@@ -30,7 +30,7 @@ resource "azurerm_policy_set_definition" "initiative_policy" {
       "effect": {"value": "DeployIfNotExists"}
     },
     {
-      "effect": {"value": "DeployIfNotExists"}
+      "metricsEnabled": {"value": "/subscriptions/9d07d60f-870c-4033-817b-ba7dfd5a3d71/resourcegroups/terraform-policy-rg/providers/microsoft.operationalinsights/workspaces/dev-workspace"}
     }
     VALUE
   }
